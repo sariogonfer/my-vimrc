@@ -34,3 +34,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Spaces 
+set tabstop=8
+set expandtab
+set shiftwidth=4
+set softtabstop=4
