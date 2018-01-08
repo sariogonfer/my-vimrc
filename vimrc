@@ -39,7 +39,7 @@ execute pathogen#infect()
 map <C-n> :NERDTreeToggle<CR>
 
 " Syntastic
-let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_checkers = ['pylint','flake8','python']
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
