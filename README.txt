@@ -1,4 +1,4 @@
-Before install all bundles with Vundle:
+ Install bundles with Vundle:
 :PluginsInstall
 
 # YouCompleteME
@@ -9,10 +9,12 @@ sudo apt install cmake build-essential
 
 # Syntastic
 
-mkdir -p ~/.vim/autoload ~/.vim/bundle && curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-cd ~/.vim/bundle && git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
-
 Open vim and then:
 
 :Helptags
 
+# TagBar
+
+Required package:
+
+sudo apt install exuberant-ctags

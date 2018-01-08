@@ -1,3 +1,5 @@
+syntax on
+
 set nocompatible              " required
 filetype off                  " required
 
@@ -20,6 +22,12 @@ Plugin 'ntpeters/vim-better-whitespace'
 
 " Autoclose HTML tags
 Plugin 'alvan/vim-closetag'
+
+" Added elixir support
+Plugin 'elixir-editors/vim-elixir'
+
+" TagBar
+Plugin 'majutsushi/tagbar'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -55,3 +63,6 @@ autocmd BufNewFile,BufRead *.py set colorcolumn=80
 
 " Whitespaces
 autocmd BufEnter * EnableStripWhitespaceOnSave
+
+" TagBar
+nmap <F8> :TagbarToggle<CR>
