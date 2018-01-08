@@ -29,17 +29,18 @@ Plugin 'elixir-editors/vim-elixir'
 " TagBar
 Plugin 'majutsushi/tagbar'
 
+" Syntactic
+Plugin 'vim-syntastic/syntastic'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-
-execute pathogen#infect()
 
 " NERDtree
 map <C-n> :NERDTreeToggle<CR>
 
 " Syntastic
-let g:syntastic_python_checkers = ['pylint','flake8','python']
+let g:syntastic_python_checkers = ['pylint']
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
