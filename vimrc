@@ -32,12 +32,16 @@ Plugin 'majutsushi/tagbar'
 " Syntactic
 Plugin 'vim-syntastic/syntastic'
 
+" SQL highlighting
+Plugin 'shmup/vim-sql-syntax'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " NERDtree
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeIgnore = ['\.pyc$']
 
 " Syntastic
 let g:syntastic_python_checkers = ['pylint']
@@ -45,9 +49,9 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " Spaces
@@ -67,3 +71,7 @@ autocmd BufEnter * EnableStripWhitespaceOnSave
 
 " TagBar
 nmap <F8> :TagbarToggle<CR>
+
+augroup filetypedetect
+  au BufRead,BufNewFile *.q setfiletype sql
+augroup END
