@@ -35,6 +35,12 @@ Plugin 'vim-syntastic/syntastic'
 " SQL highlighting
 Plugin 'shmup/vim-sql-syntax'
 
+" Command-T
+Plugin 'wincent/command-t'
+
+" CoffeScript
+Plugin 'kchmck/vim-coffee-script'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -61,7 +67,8 @@ set shiftwidth=4
 set softtabstop=4
 
 autocmd BufNewFile,BufRead *.py set tabstop=8 shiftwidth=4 softtabstop=4 expandtab
-autocmd BufNewFile,BufRead *.html set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd BufNewFile,BufRead *.coffee set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd BufNewFile,BufRead *.ex set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
 " Limit python code
 autocmd BufNewFile,BufRead *.py set colorcolumn=80
