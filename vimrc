@@ -68,6 +68,7 @@ set softtabstop=4
 
 autocmd BufNewFile,BufRead *.py set tabstop=8 shiftwidth=4 softtabstop=4 expandtab
 autocmd BufNewFile,BufRead *.coffee set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd BufNewFile,BufRead *.html set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 autocmd BufNewFile,BufRead *.ex set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 
 " Limit python code
@@ -82,3 +83,7 @@ nmap <F8> :TagbarToggle<CR>
 augroup filetypedetect
   au BufRead,BufNewFile *.q setfiletype sql
 augroup END
+
+" Highlight all search matches
+set hlsearch
+
